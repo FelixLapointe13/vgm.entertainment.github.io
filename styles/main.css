@@ -1,0 +1,960 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+/* ==========================================================================
+   cover / tools
+   ========================================================================== */
+/* ==========================================================================
+   COLORS / SETTINGS
+   ========================================================================== */
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #edeec9;
+  --color-secondary: #98c9a3;
+  --color-tertiary: #bfd8bd;
+  --color-bg-primary: #fefae0;
+  --color-bg-secondary: #77bfa3;
+}
+
+/* ==========================================================================
+   FONTS / SETTINGS
+   ========================================================================== */
+:root {
+  --font-primary: 'Rajdhani', sans-serif;
+  --font-secondary: 'DM Sans', sans-serif;
+  --font-size-content: 1.2rem;
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+}
+
+/* ==========================================================================
+   DIMENSIONS / SETTINGS
+   ========================================================================== */
+:root {
+  --spacing-xs: 5px;
+  --spacing-sm: 15px;
+  --spacing-md: 30px;
+  --spacing-lg: 50px;
+  --spacing-slg: 70px;
+  --spacing-xl: 105px;
+  --grid-gap: var(--spacing-md);
+}
+
+/* ==========================================================================
+   easing / settings
+   ========================================================================== */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   RESET / GENERIC
+   ========================================================================== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   BODY / ELEMENT
+   Le body permet d'initialiser les propriétés générales de la page.
+   Les éléments de la page vont hérités des propriétés inscrite dans body
+   ========================================================================== */
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-black);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-content);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   HEADINGS / ELEMENT
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  line-height: 1;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  margin: 0;
+  color: var(--color-white);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   LINKS / ELEMENTS
+   Style de base de tous les liens et bouton du site
+   ========================================================================== */
+a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+}
+a:hover {
+  color: var(--color-secondary);
+}
+
+.bouton {
+  background-color: var(--color-bg-secondary);
+  padding: 7px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--color-bg-secondary);
+}
+.bouton:hover {
+  background-color: var(--color-black);
+}
+
+/* ==========================================================================
+   WRAPPER / ELEMENT
+   ========================================================================== */
+.wrapper {
+  max-width: 1440px;
+  width: calc(100% - var(--spacing-md));
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   header / component
+   ========================================================================== */
+.header {
+  background-color: var(--color-bg-primary);
+}
+
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.header .wrapper .logo__vgm {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+.header .wrapper .header__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  list-style: none;
+}
+@media (width <= 768px) {
+  .header .wrapper .header__menu {
+    display: none;
+  }
+}
+.header .wrapper {
+  /* HEADER TOGGLE */
+}
+.header .wrapper .header__toggle {
+  --bar-height: 5px;
+  --bar-width: 50px;
+  --bar-spacer: 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  width: var(--bar-width);
+  height: var(--bar-width);
+  z-index: 10;
+  display: none;
+}
+.header .wrapper .header__toggle span {
+  background: var(--color-black);
+  border-radius: 3px;
+  height: var(--bar-height);
+  width: 100%;
+  position: absolute;
+  top: calc(50% - var(--bar-height) / 2);
+  left: calc(50% - var(--bar-width) / 2);
+  transition: 0.3s all ease-out;
+}
+.header .wrapper .header__toggle span:nth-child(1) {
+  top: calc(50% - var(--bar-height) / 2 - var(--bar-height) - var(--bar-spacer));
+}
+.header .wrapper .header__toggle span:nth-child(3) {
+  top: calc(50% - var(--bar-height) / 2 + var(--bar-height) + var(--bar-spacer));
+}
+.nav-is-active .header .wrapper .header__toggle span {
+  top: calc(50% - var(--bar-height) / 2);
+}
+.nav-is-active .header .wrapper .header__toggle span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.nav-is-active .header .wrapper .header__toggle span:nth-child(2) {
+  transform: scaleX(0);
+}
+.nav-is-active .header .wrapper .header__toggle span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+@media (width <= 768px) {
+  .header .wrapper .header__toggle {
+    display: block;
+  }
+}
+@media (width <= 768px) {
+  .header .wrapper {
+    width: 100%;
+    z-index: 3;
+  }
+}
+
+.header__mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 500px;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-600px);
+  transition: transform 0.6s ease-in-out;
+}
+.nav-is-active .header__mobile {
+  transform: translateY(0px);
+}
+.header__mobile .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.header__mobile .logo__mobile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header__mobile .logo__mobile img {
+  height: 100px;
+}
+.header__mobile .menu__mobile {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero {
+  position: relative;
+}
+.hero .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 90vh;
+}
+@media (width <= 768px) {
+  .hero .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.hero .trapeze-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 65%;
+  height: 90vh;
+  background-color: rgba(119, 191, 163, 0.7);
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+@media (width <= 768px) {
+  .hero .trapeze-transparent {
+    height: 50%;
+  }
+}
+.hero .hero__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  z-index: 1;
+}
+.hero .hero__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (width <= 768px) {
+  .hero .hero__media {
+    height: 50%;
+  }
+}
+.hero .hero__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-slg);
+  background-color: var(--color-black);
+  padding: 40px 30px;
+  border-radius: 15px;
+  color: var(--color-white);
+}
+@media (width <= 768px) {
+  .hero .hero__content {
+    transform: translateY(150px);
+  }
+}
+.hero .boutons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.separateur .wrapper {
+  display: flex;
+  gap: 210px;
+  align-items: center;
+  padding: 50px 0;
+}
+.separateur .wrapper img {
+  border: 3px solid var(--color-secondary);
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 1080px;
+}
+@media (width <= 768px) {
+  .separateur .wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+/* Contenu de la section jeux artistes dans la page d'accueil */
+.jeux_artistes {
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+}
+.jeux_artistes .transparence {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(119, 191, 163, 0.8);
+}
+.jeux_artistes .bg_jeux_artistes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.jeux_artistes .bg_jeux_artistes img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.jeux_artistes .jeux_artistes_content {
+  position: relative;
+  z-index: 3;
+}
+.jeux_artistes p {
+  margin-top: 40px;
+}
+.jeux_artistes hr {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-black);
+  margin: 80px 0 60px;
+}
+
+/* Contenu de la section jeux et artistes dans leur page respectif */
+.article_jeux_artistes {
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Carte page d'accueil */
+.cartes_accueil {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-slg);
+  margin: 85px 0;
+}
+@media (width <= 1024px) {
+  .cartes_accueil {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (width <= 768px) {
+  .cartes_accueil {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carte_accueil {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.carte_accueil .carte__media {
+  width: 100%;
+  height: 100%;
+}
+.carte_accueil .carte__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.carte_accueil .carte__content {
+  padding: 10px 10px;
+  margin: 0;
+  background-color: var(--color-bg-primary);
+  border: 2px solid var(--color-black);
+  border-radius: 15px 0;
+  width: 70%;
+  position: absolute;
+  transition: all 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  bottom: -50px;
+  right: 0;
+}
+.carte_accueil:hover .carte__media::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.carte_accueil:hover .carte__content {
+  bottom: 0;
+}
+
+/* Carte page jeux et artistes */
+.cartes_jeux_artistes {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
+  row-gap: 60px;
+  text-align: left;
+}
+@media (width <= 768px) {
+  .cartes_jeux_artistes {
+    grid-template-columns: 1fr;
+  }
+}
+.cartes_jeux_artistes .carte_media {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.cartes_jeux_artistes .carte_media img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cartes_jeux_artistes .carte_media .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: var(--color-bg-secondary);
+}
+.cartes_jeux_artistes .carte_media:hover .icon {
+  transform: scale(0.8) translate(-60%, -60%);
+}
+.cartes_jeux_artistes .carte_content {
+  position: relative;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cartes_jeux_artistes .carte_content::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  bottom: 130px;
+  height: 100%;
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+}
+
+/* ==========================================================================
+   icons / component
+   ========================================================================== */
+.icon {
+  fill: currentColor;
+  display: inline-block;
+  flex: 0 0 auto;
+  height: 1em;
+  vertical-align: middle;
+  width: 1em;
+  stroke: transparent;
+}
+
+.icon--stroke {
+  fill: transparent;
+  stroke: currentColor;
+}
+
+.icon--xs {
+  height: 0.75em;
+  width: 0.75em;
+}
+
+.icon--sm {
+  height: 0.8em;
+  width: 0.8em;
+}
+
+.icon--md {
+  height: 1.25em;
+  width: 1.25em;
+}
+
+.icon--lg {
+  height: 1.75em;
+  width: 1.75em;
+}
+
+.icon--slg {
+  height: 6.25em;
+  width: 6.25em;
+}
+
+.icon--xl {
+  height: 7em;
+  width: 7em;
+}
+
+.footer {
+  text-align: center;
+  margin: 100px 0;
+}
+.footer .footer_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+@media (width <= 768px) {
+  .footer .footer_top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.footer .footer_gauche {
+  text-align: left;
+}
+.footer .footer_gauche .logo__vgm {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+@media (width <= 768px) {
+  .footer .footer_gauche {
+    text-align: center;
+  }
+  .footer .footer_gauche .logo__vgm {
+    justify-content: center;
+  }
+}
+.footer .menu {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+.footer .footer_droite {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+}
+.footer .footer_droite .icon {
+  width: 60px;
+  height: 60px;
+}
+@media (width <= 768px) {
+  .footer .footer_droite {
+    justify-content: center;
+  }
+}
+.footer hr {
+  margin: 60px 0 50px;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-black);
+}
+/*# sourceMappingURL=main.css.map */
